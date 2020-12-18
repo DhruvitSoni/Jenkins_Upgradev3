@@ -21,6 +21,9 @@ pipeline {
                   steps {
                         echo "Deploying in Production Area"
                   }
+             stage('Checkout SCM') {
+    git branch: 'dependabot/maven/java-tomcat-sample/junit-junit-4.13.1', credentialsId: 'dhruvitsoni', url: "https://github.com/DhruvitSoni/Jenkins_Upgradev3.git"
+}
             }
       }
 }
